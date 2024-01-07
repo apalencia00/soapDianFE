@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+    TODO define vocabulary identification
+    PUBLIC ID: -//vendor//vocabulary//EN
+    SYSTEM ID: http://server/path/UBL-CommonAggregateComponents-2.1.dtd
+
+-->
+
+<!--
+    An example how to use this DTD from your XML document:
+
+    <?xml version="1.0"?>
+
+    <!DOCTYPE xsd:schema SYSTEM "UBL-CommonAggregateComponents-2.1.dtd">
+
+    <xsd:schema>
+    ...
+    </xsd:schema>
+-->
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT xsd:schema (xsd:import|xsd:complexType|xsd:element)*>
+<!ATTLIST xsd:schema
+    targetNamespace CDATA #IMPLIED
+    elementFormDefault CDATA #IMPLIED
+    attributeFormDefault CDATA #IMPLIED
+    version CDATA #IMPLIED
+    xmlns:xsd CDATA #IMPLIED
+    xmlns CDATA #IMPLIED
+    xmlns:ccts CDATA #IMPLIED
+    xmlns:cbc CDATA #IMPLIED
+    xmlns:cac CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT xsd:import EMPTY>
+<!ATTLIST xsd:import
+    namespace CDATA #IMPLIED
+    schemaLocation CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT xsd:element (xsd:annotation)*>
+<!ATTLIST xsd:element
+    name CDATA #IMPLIED
+    type CDATA #IMPLIED
+    ref CDATA #IMPLIED
+    minOccurs CDATA #IMPLIED
+    maxOccurs CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT xsd:complexType (xsd:sequence|xsd:annotation)*>
+<!ATTLIST xsd:complexType
+    name CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT xsd:annotation (xsd:documentation)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT xsd:documentation (ccts:Component)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT ccts:Component (ccts:ComponentType|ccts:ObjectClass|ccts:PropertyTermQualifier|ccts:PropertyTerm|ccts:DictionaryEntryName|ccts:AssociatedObjectClass|ccts:RepresentationTerm|ccts:Examples|ccts:Definition|ccts:AlternativeBusinessTerms|ccts:DataTypeQualifier|ccts:Cardinality|ccts:DataType)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT ccts:ComponentType (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT ccts:DictionaryEntryName (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT ccts:Definition (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT ccts:ObjectClass (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT xsd:sequence (xsd:element)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT ccts:Cardinality (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT ccts:PropertyTerm (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT ccts:RepresentationTerm (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT ccts:DataType (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT ccts:PropertyTermQualifier (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT ccts:AssociatedObjectClass (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT ccts:AlternativeBusinessTerms (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT ccts:Examples (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT ccts:DataTypeQualifier (#PCDATA)>
